@@ -16,7 +16,7 @@ def PYTEST = "pytest \
               --junit-xml=results.xml"
 
 bc = new BuildConfig()
-bc.nodetype = 'example_failing_test'
+bc.nodetype = 'RHEL-6'
 bc.name = '3.6'
 bc.conda_packages = ['python=3.6',
                      'pytest=3.8.2',
