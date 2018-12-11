@@ -26,7 +26,8 @@ bc.nodetype = 'RHEL-6'
 bc.name = '3.6'
 bc.conda_packages = ['python=3.6',
                      'pytest=3.8.2']
-
+bc.build_cmds = ["ls -al",
+                 "date"]
 bc.test_cmds = ["printenv | sort",
                 "${PYTEST}"]
 
