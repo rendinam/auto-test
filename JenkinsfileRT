@@ -8,6 +8,7 @@ if (utils.scm_checkout(['skip_disable':true])) return
 jobconfig = new JobConfig()
 jobconfig.post_test_summary = true
 
+
 // Pytest wrapper
 def PYTEST_BASETEMP = "test_outputs"
 def PYTEST = "pytest \
@@ -21,9 +22,12 @@ data_config.server_id = 'bytesalad'
 data_config.root = '${PYTEST_BASETEMP}'
 data_config.match_prefix = '(.*)_result' // .json is appended automatically
 
+
 bc = new BuildConfig()
 bc.nodetype = 'RHEL-6'
 bc.name = '3.6'
+bc.env_vars = ['VAR_ONE=1',
+               'VAR_TWO=2']
 bc.conda_packages = ['python=3.6',
                      'pytest=3.8.2']
 bc.build_cmds = ["ls -al",
