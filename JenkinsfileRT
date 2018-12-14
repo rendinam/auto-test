@@ -23,18 +23,25 @@ data_config.root = '${PYTEST_BASETEMP}'
 data_config.match_prefix = '(.*)_result' // .json is appended automatically
 
 
-bc = new BuildConfig()
-bc.nodetype = 'RHEL-6'
-bc.name = '3.6'
-bc.env_vars = ['VAR_ONE=1',
+bc0 = new BuildConfig()
+bc0.nodetype = 'RHEL-6'
+bc0.name = '3.6'
+bc0.env_vars = ['VAR_ONE=1',
                'VAR_TWO=2']
-bc.conda_packages = ['python=3.6',
+bc0.conda_packages = ['python=3.6',
                      'pytest=3.8.2']
-bc.build_cmds = ["ls -al",
+bc0.build_cmds = ["ls -al",
                  "date"]
-bc.test_cmds = ["printenv | sort",
+bc0.test_cmds = ["printenv | sort",
                 "${PYTEST}"]
+bc0.test_configs = [data_config]
 
-bc.test_configs = [data_config]
+
+
+bc1 = utils.copy(bc0)
+bc0.env_vars = ['VAR_THREE=3',
+               'VAR_FOUR=4']
+
+
 
 utils.run([bc, jobconfig])
