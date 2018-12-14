@@ -26,8 +26,9 @@ data_config.match_prefix = '(.*)_result' // .json is appended automatically
 bc = new BuildConfig()
 bc.nodetype = 'RHEL-6'
 bc.name = '3.6'
+def VALUE=123
 bc.env_vars = ['VAR_ONE=1',
-               "VAR_TWO=2"]
+               "VAR_TWO=${VALUE}"]
 bc.conda_packages = ['python=3.6',
                      'pytest=3.8.2']
 bc.build_cmds = ["ls -al",
