@@ -45,4 +45,4 @@ bc1.env_vars = ['VAR_THREE=3',
 
 
 
-utils.run([bc, jobconfig])
+utils.run([bc0, bc1, jobconfig])
