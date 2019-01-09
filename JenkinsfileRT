@@ -1,5 +1,8 @@
+//@Library("utils@${env.BRANCH_NAME}") _
 println("env.BRANCH_NAME = ${env.BRANCH_NAME}")
-@Library("utils@${env.BRANCH_NAME}") _
+library("utils@${env.BRANCH_NAME}")
+
+println('Library loaded.')
 
 //@Library('utils@refactor') _
 ////@Library('utils@master') _
