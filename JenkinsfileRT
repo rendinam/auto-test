@@ -17,6 +17,7 @@ if (utils.scm_checkout(['skip_disable':true])) return
 jobconfig = new JobConfig()
 jobconfig.post_test_summary = true
 jobconfig.enable_env_publication = true
+jobconfig.publish_env_on_success_only = false
 
 
 // Pytest wrapper
