@@ -52,7 +52,7 @@ bc1 = utils.copy(bc0)
 bc1.name = 'Second'
 bc1.env_vars = ['VAR_THREE=3',
                'VAR_FOUR=4']
-bc1.test_cmds[1] = "${PYTEST} test_alwaysfail.py"
+//bc1.test_cmds[1] = "${PYTEST} test_alwaysfail.py"
 
 
 utils.run([bc0, bc1, jobconfig])
