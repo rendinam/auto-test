@@ -57,7 +57,8 @@ bc1.test_cmds[1] = "${PYTEST} test_25pass.py"
 bc2 = utils.copy(bc0)
 bc2.name = 'Third'
 bc2.conda_packages = []
-bc2.test_cmds = "ls -al"
+bc2.test_cmds = ["ls -al"]
+bc2.test_configs = []
 
 
-utils.run([bc0, bc1, jobconfig])
+utils.run([bc0, bc1, bc2, jobconfig])
