@@ -1,4 +1,4 @@
-@Library('utils@specs_upload') _
+@Library('utils@master') _
  
 //@Library("utils@${env.BRANCH_NAME}") _
 //println("env.BRANCH_NAME = ${env.BRANCH_NAME}")
