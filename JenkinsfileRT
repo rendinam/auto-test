@@ -1,4 +1,4 @@
-@Library('utils@escape_cp_name') _
+@Library('utils@conda_ver') _
  
 //@Library("utils@${env.BRANCH_NAME}") _
 //println("env.BRANCH_NAME = ${env.BRANCH_NAME}")
@@ -39,6 +39,7 @@ bc0.nodetype = 'RHEL-6'
 bc0.name = 'First buildconfig'
 bc0.env_vars = ['VAR_ONE=1',
                'VAR_TWO=2']
+bc0.conda_ver = ['4.6.4']
 bc0.conda_packages = ['python=3.6',
                      'pytest=3.8.2']
 bc0.build_cmds = ["date"]
