@@ -43,7 +43,8 @@ bc0.conda_ver = '4.6.4'
 bc0.conda_packages = ['python=3.6',
                      'pytest=3.8.2']
 bc0.build_cmds = ["date",
-                  "conda --version"]
+                  "env"]
+                  //"conda --version"]
 bc0.test_cmds = ["printenv | sort",
                 "${PYTEST} test_75pass.py"]
 bc0.test_configs = [data_config]
