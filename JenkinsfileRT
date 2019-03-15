@@ -42,7 +42,8 @@ bc0.env_vars = ['VAR_ONE=1',
 bc0.conda_ver = '4.6.4'
 bc0.conda_packages = ['python=3.6',
                      'pytest=3.8.2']
-bc0.build_cmds = ["date"]
+bc0.build_cmds = ["date",
+                  "conda --version"]
 bc0.test_cmds = ["printenv | sort",
                 "${PYTEST} test_75pass.py"]
 bc0.test_configs = [data_config]
@@ -56,7 +57,7 @@ bc1.test_cmds[1] = "${PYTEST} test_25pass.py"
 
 
 bc2 = utils.copy(bc0)
-bc2.name = 'Third'
+bc2.name = 'Third build config'
 bc2.conda_packages = []
 bc2.test_cmds = ["ls -al"]
 bc2.test_configs = []
