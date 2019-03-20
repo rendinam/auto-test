@@ -46,7 +46,6 @@ bc0.conda_packages = ['python=3.6',
 bc0.build_cmds = ["date",
                   "./access_env_var.sh",
                   "which python",
-                  "env",
                   "conda install ipython"]
 bc0.test_cmds = ["printenv | sort",
                 "${PYTEST} test_75pass.py"]
