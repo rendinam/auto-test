@@ -47,8 +47,7 @@ bc0.build_cmds = ["date",
                   "./access_env_var.sh",
                   "which python",
                   "conda install ipython"]
-bc0.test_cmds = ["printenv | sort",
-                "${PYTEST} test_75pass.py"]
+bc0.test_cmds = ["${PYTEST} test_75pass.py"]
 bc0.test_configs = [data_config]
 
 
