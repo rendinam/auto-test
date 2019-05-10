@@ -1,4 +1,4 @@
-@Library('utils@yml_dump') _
+@Library('utils@master') _
  
 //@Library("utils@${env.BRANCH_NAME}") _
 //println("env.BRANCH_NAME = ${env.BRANCH_NAME}")
@@ -35,6 +35,7 @@ data_config.root = '${PYTEST_BASETEMP}'
 data_config.match_prefix = '(.*)_result' // .json is appended automatically
 
 
+pyver = "3.6"
 bc0 = new BuildConfig()
 //bc0.nodetype = 'RHEL-6'
 bc0.nodetype = 'linux-container'
@@ -42,7 +43,7 @@ bc0.name = 'First buildconfig'
 bc0.env_vars = ['VAR_ONE=1',
                'VAR_TWO=2']
 bc0.conda_ver = '4.6.4'
-bc0.conda_packages = ['python=3.6',
+bc0.conda_packages = ["python=${pyver}",
                      'pytest=3.8.2',
                      'git',]
 bc0.build_cmds = ["date",
